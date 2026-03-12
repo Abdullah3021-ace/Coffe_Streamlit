@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ☕ Coffee Sales EDA Dashboard
 
 An interactive Streamlit dashboard for exploratory data analysis of coffee sales data.
@@ -98,3 +99,7 @@ coffee_eda_app/
 └── .streamlit/
     └── config.toml         ← Theme & server config
 ```
+=======
+# Coffe_Streamlit
+My FIrst web based  python app
+>>>>>>> 09cbb0db6769d258d4317bd48c52b035fd0f1132
