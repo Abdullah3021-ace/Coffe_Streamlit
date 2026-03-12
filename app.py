@@ -86,10 +86,6 @@ with st.sidebar:
     st.markdown('<div class="sidebar-title">☕ Coffee Sales<br>EDA Dashboard</div>', unsafe_allow_html=True)
     st.divider()
 
-    uploaded = st.file_uploader("📂 Upload CSV File", type=["csv"],
-                                help="Upload your coffee sales CSV")
-
-    st.divider()
     st.markdown("**📊 Navigation**")
     page = st.radio("", [
         "🏠 Overview",
@@ -115,20 +111,10 @@ with st.sidebar:
 
 # ── Load Data ─────────────────────────────────────────────────────────────────
 @st.cache_data
-def load_data(file):
-    return pd.read_csv(file)
+def load_data():
+    return pd.read_csv("~/Downloads/datasets/3_Coffe_sales.csv")
 
-if uploaded:
-    df = load_data(uploaded)
-else:
-    st.markdown("""
-    <div class="upload-area">
-        <h2 style="color:#FFD700;">☕ Welcome to the Coffee Sales EDA App</h2>
-        <p style="color:#D2B48C;">Upload your <b>CSV file</b> using the sidebar to start exploring your data.</p>
-        <p style="color:#A0785A; font-size:0.85rem;">Expected columns: hour_of_day · Time_of_Day · coffee_name · cash_type · money · Weekday · Month_name · date</p>
-    </div>
-    """, unsafe_allow_html=True)
-    st.stop()
+df = load_data()
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 def section(title):
