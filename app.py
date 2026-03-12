@@ -112,7 +112,7 @@ with st.sidebar:
 # ── Load Data ─────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    return pd.read_csv("~/Downloads/datasets/3_Coffe_sales.csv")
+    return pd.read_csv("3_Coffe_sales.csv")
 
 df = load_data()
 
